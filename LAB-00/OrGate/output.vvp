@@ -1,0 +1,59 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001c26338b3c0 .scope module, "tb" "tb" 2 1;
+ .timescale 0 0;
+v000001c26338a580_0 .var "P", 0 0;
+v000001c26338a620_0 .var "Q", 0 0;
+v000001c26338a6c0_0 .net "R", 0 0, L_000001c263292b80;  1 drivers
+S_000001c26338b550 .scope module, "dut" "orGate" 2 5, 3 1 0, S_000001c26338b3c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "X";
+L_000001c263292b80 .functor OR 1, v000001c26338a580_0, v000001c26338a620_0, C4<0>, C4<0>;
+v000001c2632924d0_0 .net "A", 0 0, v000001c26338a580_0;  1 drivers
+v000001c26338a440_0 .net "B", 0 0, v000001c26338a620_0;  1 drivers
+v000001c26338a4e0_0 .net "X", 0 0, L_000001c263292b80;  alias, 1 drivers
+    .scope S_000001c26338b3c0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001c26338a580_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001c26338a620_0, 0;
+    %delay 50, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001c26338a580_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000001c26338a620_0, 0;
+    %delay 50, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000001c26338a580_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001c26338a620_0, 0;
+    %delay 50, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000001c26338a580_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000001c26338a620_0, 0;
+    %delay 50, 0;
+    %end;
+    .thread T_0;
+    .scope S_000001c26338b3c0;
+T_1 ;
+    %vpi_call 2 26 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 27 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "orTestBench.v";
+    "orDesign.v";
