@@ -1,13 +1,14 @@
-module xnorGate(A,B,Z);
+module xnorGate(A,B,C,X);
 
-    input A,B;
-    output V,W,X,Y,Z;
+    input A,B,C;
+    output X;
 
-    not (V,A);
-    not (W,B);
-    and (X,V,W);
-    and (Y,A,B);
-    or (Z,X,Y);
+    // not (V,A);
+    // not (W,B);
+    // and (X,V,W);
+    // and (Y,A,B);
+    // or (Z,X,Y);
+    assign X = ~(A ^ B ^ C);
 
 endmodule
 

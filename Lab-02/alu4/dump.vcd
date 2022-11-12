@@ -1,0 +1,71 @@
+$date
+	Sat Nov 12 19:43:28 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 9 ! vCheck [8:0] $end
+$var wire 1 " Z $end
+$var wire 1 # V $end
+$var wire 8 $ Result [7:0] $end
+$var wire 1 % N $end
+$var wire 1 & C $end
+$var reg 8 ' A [7:0] $end
+$var reg 2 ( ALUControl [1:0] $end
+$var reg 8 ) B [7:0] $end
+$scope module dut $end
+$var wire 8 * A [7:0] $end
+$var wire 2 + ALUControl [1:0] $end
+$var wire 8 , A_and_B [7:0] $end
+$var wire 8 - A_or_B [7:0] $end
+$var wire 8 . B [7:0] $end
+$var wire 1 & C $end
+$var wire 1 / Cout_and $end
+$var wire 8 0 Result [7:0] $end
+$var wire 1 1 ctrl1_not $end
+$var wire 8 2 not_B [7:0] $end
+$var wire 9 3 vCheck [8:0] $end
+$var wire 1 " Z $end
+$var wire 1 # V $end
+$var wire 8 4 Sum [7:0] $end
+$var wire 1 % N $end
+$var wire 8 5 Mux2 [7:0] $end
+$var wire 8 6 Mux1 [7:0] $end
+$var wire 1 7 Cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+17
+b1111100 6
+b100100 5
+b100100 4
+b100100100 3
+b10000011 2
+11
+b100100 0
+1/
+b1111100 .
+b11111100 -
+b101000 ,
+b0 +
+b10101000 *
+b1111100 )
+b0 (
+b10101000 '
+1&
+0%
+b100100 $
+1#
+0"
+b100100100 !
+$end
+#200

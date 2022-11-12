@@ -1,25 +1,34 @@
 module tb();
 
-    reg P,Q;
+    reg P,Q,C;
     wire R;
 
-    xnorGate dut (.A(P), .B(Q), .Z(R));
+    xnorGate dut (.A(P), .B(Q), .C(C), .X(R));
 
     initial begin
       P <= 1'b0;
       Q <= 1'b0;
+      C <= 1'b0;
       #50;
 
-      P <= 1'b1;
+      P <= 1'b0;
       Q <= 1'b0;
+      C <= 1'b1;
       #50;
 
       P <= 1'b0;
       Q <= 1'b1;
+      C <= 1'b0;
+      #50;
+
+      P <= 1'b0;
+      Q <= 1'b1;
+      C <= 1'b1;
       #50;
 
       P <= 1'b1;
       Q <= 1'b1;
+      C <= 1'b1;
       #50;
     end
 
