@@ -25,13 +25,6 @@ module tb();
       $dumpvars(0);
     end
 
-    // always begin
-    //   clk <= 1'b0;
-    //   #50;
-    //   clk <= 1'b1;
-    //   #50;
-    // end
-
     initial begin
       zero <= 1'b1;
       op <= 7'b0000011;

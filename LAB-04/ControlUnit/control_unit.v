@@ -20,15 +20,6 @@ module control_unit(zero, op, func3, func7, PCSrc, RegWrite, ALUSrc, MemWrite, R
         .ResultSrc(ResultSrc), .Branch(Branch), .ImmSrc(ImmSrc), .ALUOp(ALUReg)
     );
 
-    // always @(posedge clk) begin
-    //   if (rst) begin
-    //     ALUReg <= 2'b00;
-    //   end
-    //   else begin
-    //     ALUReg <= ALUOp;
-    //   end
-    // end
-
     alu_decoder alu_dec (
         .ALUOp(ALUReg), .func3(func3), .op5(op5), .func7_5(func7), .ALUControl(ALUControl)
     );
