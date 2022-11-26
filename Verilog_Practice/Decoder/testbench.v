@@ -14,6 +14,11 @@ module tb();
     end
 
     initial begin
+
+      A <= 2'b10;
+      E <= 1'b0;
+      #100;
+
       A <= 2'b00;
       E <= 1'b1;
       #100;

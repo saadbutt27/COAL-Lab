@@ -1,16 +1,16 @@
-module main_decoder(op, RegWrite, MemWrite, Branch, ResultSrc, ALUSrc, ImmSrc, ALUOp);
+module main_decoder(op, RegWrite, ALUSrc, MemWrite, ResultSrc, Branch, ImmSrc, ALUOp);
 
-    input[6:0] Op;
+    input[6:0] op;
     output RegWrite, ALUSrc, MemWrite, ResultSrc, Branch;
     output [1:0] ImmSrc, ALUOp;
 
-    assign RegWrite = ((Op == 7'b0000011) | (Op == 7'b0110011)) ? 1'b1 : 1b'0;
-    assign ALUSrc = ((Op == 7'b0000011) | (Op == 7'b0100011)) ? 1'b1 : 1b'0;
-    assign MemWrite = ((Op == 7'b0100011)) ? 1'b1 : 1b'0;
-    assign ResultSrc = ((Op == 7'b0000011)) ? 1'b1 : 1b'0;
-    assign Branch = ((Op == 7'b1100011)) ? 1'b1 : 1b'0;
+    assign RegWrite = ((op == 7'b0000011) | (op == 7'b0110011)) ? 1'b1 : 1'b0;
+    assign ALUSrc = ((op == 7'b0000011) | (op == 7'b0100011)) ? 1'b1 : 1'b0;
+    assign MemWrite = ((op == 7'b0100011)) ? 1'b1 : 1'b0;
+    assign ResultSrc = ((op == 7'b0000011)) ? 1'b1 : 1'b0;
+    assign Branch = ((op == 7'b1100011)) ? 1'b1 : 1'b0;
 
-    assign ImmSrc = ((Op == 7'b0100011)) ? 2'b01 : (Op == 7'b1100011) ? 2'b10 : 2'b00;
-    assign ALUOp = ((Op == 7'b0110011)) ? 2'b10 : (Op == 7'b1100011) ? 2'b01 : 2'b00;
+    assign ImmSrc = ((op == 7'b0100011)) ? 2'b01 : (op == 7'b1100011) ? 2'b10 : 2'b00;
+    assign ALUOp = ((op == 7'b0110011)) ? 2'b10 : (op == 7'b1100011) ? 2'b01 : 2'b00;
 
 endmodule

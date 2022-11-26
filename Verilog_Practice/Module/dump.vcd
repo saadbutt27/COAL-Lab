@@ -1,0 +1,96 @@
+$date
+	Sun Nov 27 00:24:31 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! Z $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ C $end
+$var reg 1 % D $end
+$var reg 1 & clk $end
+$var reg 1 ' rst $end
+$scope module dut $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ C $end
+$var wire 1 % D $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+$var wire 1 ( output2Module1 $end
+$var wire 1 ) output1Module1 $end
+$var wire 1 ! Z $end
+$var reg 2 * middleReg [1:0] $end
+$scope module mod1 $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ C $end
+$var wire 1 % D $end
+$var wire 1 ) output1Module1 $end
+$var wire 1 ( output2Module1 $end
+$upscope $end
+$scope module mod2 $end
+$var wire 1 ! Z $end
+$var wire 1 + input1Module2 $end
+$var wire 1 , input2Module2 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x,
+x+
+bx *
+1)
+0(
+1'
+0&
+0%
+0$
+0#
+0"
+x!
+$end
+#50
+1!
+0+
+0,
+b0 *
+1&
+#100
+0&
+0'
+1(
+1%
+1$
+1#
+#150
+0!
+1,
+1+
+b11 *
+1&
+#200
+0&
+0(
+0%
+#250
+1!
+0,
+b1 *
+1&
+#300
+0&
+#350
+1&
+#400
+0&
