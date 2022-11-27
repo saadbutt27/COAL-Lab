@@ -1,5 +1,5 @@
 $date
-	Sun Nov 27 02:18:48 2022
+	Sun Nov 27 13:18:37 2022
 $end
 $version
 	Icarus Verilog
@@ -32,7 +32,7 @@ $var wire 1 $ MemWrite $end
 $var wire 2 / ImmSrc [1:0] $end
 $var wire 1 0 Branch $end
 $var wire 1 & ALUSrc $end
-$var wire 2 1 ALUReg [1:0] $end
+$var wire 2 1 ALUOp [1:0] $end
 $var wire 3 2 ALUControl [2:0] $end
 $scope module alu_dec $end
 $var wire 3 3 func3 [2:0] $end
@@ -65,7 +65,7 @@ b0 8
 b11 7
 b0 6
 b0 5
-b1 4
+b0 4
 b0 3
 b0 2
 b0 1
@@ -76,7 +76,7 @@ b11 -
 b0 ,
 1+
 b11 *
-1)
+0)
 b0 (
 b0 '
 1&
@@ -88,13 +88,14 @@ b0 %
 $end
 #100
 0"
-b11 4
 1.
 1$
 0!
 b1 %
 b1 /
 b1 8
+b11 4
+1)
 b100011 *
 b100011 -
 b100011 7
@@ -124,7 +125,35 @@ b10 8
 b1 1
 b1 5
 b1 9
+b10 4
+0)
 b1100011 *
 b1100011 -
 b1100011 7
 #400
+b101 '
+b101 2
+b101 6
+1"
+0#
+b0 %
+b0 /
+b0 8
+00
+b10 1
+b10 5
+b10 9
+b10 (
+b10 ,
+b10 3
+b110011 *
+b110011 -
+b110011 7
+#500
+b11 '
+b11 2
+b11 6
+b110 (
+b110 ,
+b110 3
+#600

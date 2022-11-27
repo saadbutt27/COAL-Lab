@@ -1,7 +1,7 @@
 module Register_File(A1, A2, A3, WD3, clk, reset, WE3, RD1, RD2);
 
-    input [4:0] A1, A2, A3; // A1-rs1 | A2-rs2 | A3-rd
-    input clk, reset, WE3; // WE3 - a key signal to let write or not
+    input [4:0] A1, A2, A3; // A1->rs1 | A2->rs2 | A3->rd
+    input clk, reset, WE3; // WE3 -> a key signal to let write or not
     input [31:0] WD3;
 
     output [3:0] RD1, RD2;
@@ -16,6 +16,5 @@ module Register_File(A1, A2, A3, WD3, clk, reset, WE3, RD1, RD2);
             register[A3] <= WD3;
         end
     end
-
 
 endmodule                                                                                                   
