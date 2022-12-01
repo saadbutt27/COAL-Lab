@@ -14,4 +14,3 @@ module Program_Counter(PCnext, clk, reset, PC);
     end
 
 endmodule
-
