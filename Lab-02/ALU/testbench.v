@@ -34,7 +34,6 @@ module tb();
     B <= 32'd5;
     ctrl <= 3'b011;
     #100;
-
   end
 
 endmodule 

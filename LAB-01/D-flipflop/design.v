@@ -16,17 +16,16 @@ module d_flipflop(A ,B ,C , clk, rst, Z);
     assign A_and_B_or_C = A & (B_or_C);
 
     // always block to store data temporarily in flipflop
-    always @(posedge clk)
-        begin
-        if (rst == 1'b1)
-            begin
+    always @(posedge clk) begin
+        if (rst == 1'b1) begin
             Result_Combinational_Circuit <= 1'b0;
-            end
+        end
         else begin
-        Result_Combinational_Circuit <= A_and_B_or_C;
+            Result_Combinational_Circuit <= A_and_B_or_C;
         end
     end
 
     // assignment to final output
     assign Z = Result_Combinational_Circuit;
+    
 endmodule

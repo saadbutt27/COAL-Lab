@@ -7,73 +7,73 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_0000026d331a6770 .scope module, "tb" "tb" 2 1;
+S_000001a1915d6770 .scope module, "tb" "tb" 2 1;
  .timescale 0 0;
-v0000026d331abd00_0 .net "A", 1 0, L_0000026d330a3f50;  1 drivers
-v0000026d331abda0_0 .var "Y0", 0 0;
-v0000026d331abe40_0 .var "Y1", 0 0;
-v0000026d331abee0_0 .var "Y2", 0 0;
-v0000026d330a3eb0_0 .var "Y3", 0 0;
-S_0000026d331a6900 .scope module, "dut" "encoder" 2 6, 3 1 0, S_0000026d331a6770;
+v000001a1915dbd00_0 .net "A", 1 0, L_000001a1917e3f50;  1 drivers
+v000001a1915dbda0_0 .var "Y0", 0 0;
+v000001a1915dbe40_0 .var "Y1", 0 0;
+v000001a1915dbee0_0 .var "Y2", 0 0;
+v000001a1917e3eb0_0 .var "Y3", 0 0;
+S_000001a1915d6900 .scope module, "dut" "encoder" 2 6, 3 1 0, S_000001a1915d6770;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "Y0";
     .port_info 1 /INPUT 1 "Y1";
     .port_info 2 /INPUT 1 "Y2";
     .port_info 3 /INPUT 1 "Y3";
     .port_info 4 /OUTPUT 2 "A";
-L_0000026d331ae8d0 .functor OR 1, v0000026d331abee0_0, v0000026d330a3eb0_0, C4<0>, C4<0>;
-L_0000026d331a6e40 .functor OR 1, v0000026d331abe40_0, v0000026d330a3eb0_0, C4<0>, C4<0>;
-v0000026d331a6a90_0 .net "A", 1 0, L_0000026d330a3f50;  alias, 1 drivers
-v0000026d331a6b30_0 .net "Y0", 0 0, v0000026d331abda0_0;  1 drivers
-v0000026d331ab9e0_0 .net "Y1", 0 0, v0000026d331abe40_0;  1 drivers
-v0000026d331aba80_0 .net "Y2", 0 0, v0000026d331abee0_0;  1 drivers
-v0000026d331abb20_0 .net "Y3", 0 0, v0000026d330a3eb0_0;  1 drivers
-v0000026d331abbc0_0 .net *"_ivl_2", 0 0, L_0000026d331ae8d0;  1 drivers
-v0000026d331abc60_0 .net *"_ivl_7", 0 0, L_0000026d331a6e40;  1 drivers
-L_0000026d330a3f50 .concat8 [ 1 1 0 0], L_0000026d331a6e40, L_0000026d331ae8d0;
-    .scope S_0000026d331a6770;
+L_000001a1915de8d0 .functor OR 1, v000001a1915dbee0_0, v000001a1917e3eb0_0, C4<0>, C4<0>;
+L_000001a1915d6e40 .functor OR 1, v000001a1915dbe40_0, v000001a1917e3eb0_0, C4<0>, C4<0>;
+v000001a1915d6a90_0 .net "A", 1 0, L_000001a1917e3f50;  alias, 1 drivers
+v000001a1915d6b30_0 .net "Y0", 0 0, v000001a1915dbda0_0;  1 drivers
+v000001a1915db9e0_0 .net "Y1", 0 0, v000001a1915dbe40_0;  1 drivers
+v000001a1915dba80_0 .net "Y2", 0 0, v000001a1915dbee0_0;  1 drivers
+v000001a1915dbb20_0 .net "Y3", 0 0, v000001a1917e3eb0_0;  1 drivers
+v000001a1915dbbc0_0 .net *"_ivl_2", 0 0, L_000001a1915de8d0;  1 drivers
+v000001a1915dbc60_0 .net *"_ivl_7", 0 0, L_000001a1915d6e40;  1 drivers
+L_000001a1917e3f50 .concat8 [ 1 1 0 0], L_000001a1915d6e40, L_000001a1915de8d0;
+    .scope S_000001a1915d6770;
 T_0 ;
     %vpi_call 2 11 "$dumpfile", "dump.vcd" {0 0 0};
     %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};
     %end;
     .thread T_0;
-    .scope S_0000026d331a6770;
+    .scope S_000001a1915d6770;
 T_1 ;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d330a3eb0_0, 0;
+    %assign/vec4 v000001a1917e3eb0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abee0_0, 0;
+    %assign/vec4 v000001a1915dbee0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abe40_0, 0;
+    %assign/vec4 v000001a1915dbe40_0, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v0000026d331abda0_0, 0;
+    %assign/vec4 v000001a1915dbda0_0, 0;
     %delay 100, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d330a3eb0_0, 0;
+    %assign/vec4 v000001a1917e3eb0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abee0_0, 0;
+    %assign/vec4 v000001a1915dbee0_0, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v0000026d331abe40_0, 0;
+    %assign/vec4 v000001a1915dbe40_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abda0_0, 0;
+    %assign/vec4 v000001a1915dbda0_0, 0;
     %delay 100, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d330a3eb0_0, 0;
+    %assign/vec4 v000001a1917e3eb0_0, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v0000026d331abee0_0, 0;
+    %assign/vec4 v000001a1915dbee0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abe40_0, 0;
+    %assign/vec4 v000001a1915dbe40_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abda0_0, 0;
+    %assign/vec4 v000001a1915dbda0_0, 0;
     %delay 100, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v0000026d330a3eb0_0, 0;
+    %assign/vec4 v000001a1917e3eb0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abee0_0, 0;
+    %assign/vec4 v000001a1915dbee0_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abe40_0, 0;
+    %assign/vec4 v000001a1915dbe40_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0000026d331abda0_0, 0;
+    %assign/vec4 v000001a1915dbda0_0, 0;
     %delay 100, 0;
     %end;
     .thread T_1;
@@ -81,5 +81,5 @@ T_1 ;
 :file_names 4;
     "N/A";
     "<interactive>";
-    "testBench.v";
+    "testbench.v";
     "design.v";

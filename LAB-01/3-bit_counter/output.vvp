@@ -7,60 +7,60 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_00000283aa4364c0 .scope module, "tb" "tb" 2 1;
+S_0000021e5a1e64c0 .scope module, "tb" "tb" 2 1;
  .timescale 0 0;
-v00000283aa4367e0_0 .net "Q", 2 0, L_00000283aa599120;  1 drivers
-v00000283aa436880_0 .var "clk", 0 0;
-v00000283aa433690_0 .var "reset", 0 0;
-S_00000283aa436650 .scope module, "dut" "two_bit_counter" 2 7, 3 1 0, S_00000283aa4364c0;
+v0000021e5a1e67e0_0 .net "Q", 2 0, L_0000021e5a199130;  1 drivers
+v0000021e5a1e6880_0 .var "clk", 0 0;
+v0000021e5a1e3690_0 .var "reset", 0 0;
+S_0000021e5a1e6650 .scope module, "dut" "two_bit_counter" 2 7, 3 1 0, S_0000021e5a1e64c0;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /INPUT 1 "reset";
     .port_info 2 /OUTPUT 3 "Q";
-L_00000283aa599120 .functor BUFZ 3, v00000283aa59be40_0, C4<000>, C4<000>, C4<000>;
-v00000283aa5971c0_0 .net "Q", 2 0, L_00000283aa599120;  alias, 1 drivers
-v00000283aa599080_0 .net "clk", 0 0, v00000283aa436880_0;  1 drivers
-v00000283aa59be40_0 .var "flop", 2 0;
-v00000283aa59bee0_0 .net "reset", 0 0, v00000283aa433690_0;  1 drivers
-E_00000283aa59c170 .event posedge, v00000283aa599080_0;
-    .scope S_00000283aa436650;
+L_0000021e5a199130 .functor BUFZ 3, v0000021e5a19be50_0, C4<000>, C4<000>, C4<000>;
+v0000021e5a1971d0_0 .net "Q", 2 0, L_0000021e5a199130;  alias, 1 drivers
+v0000021e5a199090_0 .net "clk", 0 0, v0000021e5a1e6880_0;  1 drivers
+v0000021e5a19be50_0 .var "flop", 2 0;
+v0000021e5a19bef0_0 .net "reset", 0 0, v0000021e5a1e3690_0;  1 drivers
+E_0000021e5a19cf00 .event posedge, v0000021e5a199090_0;
+    .scope S_0000021e5a1e6650;
 T_0 ;
-    %wait E_00000283aa59c170;
-    %load/vec4 v00000283aa59bee0_0;
+    %wait E_0000021e5a19cf00;
+    %load/vec4 v0000021e5a19bef0_0;
     %cmpi/e 1, 0, 1;
     %jmp/0xz  T_0.0, 4;
     %pushi/vec4 0, 0, 3;
-    %assign/vec4 v00000283aa59be40_0, 0;
+    %assign/vec4 v0000021e5a19be50_0, 0;
     %jmp T_0.1;
 T_0.0 ;
-    %load/vec4 v00000283aa59be40_0;
+    %load/vec4 v0000021e5a19be50_0;
     %addi 1, 0, 3;
-    %assign/vec4 v00000283aa59be40_0, 0;
+    %assign/vec4 v0000021e5a19be50_0, 0;
 T_0.1 ;
     %jmp T_0;
     .thread T_0;
-    .scope S_00000283aa4364c0;
+    .scope S_0000021e5a1e64c0;
 T_1 ;
-    %pushi/vec4 0, 0, 1;
-    %assign/vec4 v00000283aa436880_0, 0;
-    %delay 50, 0;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v00000283aa436880_0, 0;
+    %assign/vec4 v0000021e5a1e6880_0, 0;
+    %delay 50, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000021e5a1e6880_0, 0;
     %delay 50, 0;
     %jmp T_1;
     .thread T_1;
-    .scope S_00000283aa4364c0;
+    .scope S_0000021e5a1e64c0;
 T_2 ;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v00000283aa433690_0, 0;
+    %assign/vec4 v0000021e5a1e3690_0, 0;
     %delay 100, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v00000283aa433690_0, 0;
+    %assign/vec4 v0000021e5a1e3690_0, 0;
     %delay 800, 0;
     %vpi_call 2 25 "$finish" {0 0 0};
     %end;
     .thread T_2;
-    .scope S_00000283aa4364c0;
+    .scope S_0000021e5a1e64c0;
 T_3 ;
     %vpi_call 2 29 "$dumpfile", "dump.vcd" {0 0 0};
     %vpi_call 2 30 "$dumpvars", 32'sb00000000000000000000000000000000 {0 0 0};

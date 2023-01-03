@@ -21,16 +21,15 @@ module tb();
 
     initial begin
       reset <= 1'b1;
-      #100;
-      reset <= 1'b0;
-      #100;
-
-      D <= 1'b1;
-      #100;
-
       D <= 1'b0;
       #100;
-
+      reset <= 1'b0;
+      D <= 1'b1;
+      #100;
+      D <= 1'b0;
+      #100;
+      D <= 1'b1;
+      #100;
       $finish;
     end
 endmodule

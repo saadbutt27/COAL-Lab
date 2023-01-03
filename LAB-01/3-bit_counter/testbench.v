@@ -10,9 +10,9 @@ module tb();
 
     // clock cycle
     always begin
-        clk <= 1'b0;
-        #50;
         clk <= 1'b1;
+        #50;
+        clk <= 1'b0;
         #50;
     end
 
